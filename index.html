@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Booking Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Room Booking Application</h1>
+    </header>
+
+    <main>
+        <!-- Search Section -->
+        <section id="search-section">
+            <h2>Search Rooms</h2>
+            <form id="search-form">
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="check-in" required>
+                
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="check-out" required>
+                
+                <label for="guests">Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+                
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <!-- Room Details Section -->
+        <section id="rooms-section">
+            <h2>Available Rooms</h2>
+            <div id="room-list">
+                <!-- Rooms will be dynamically inserted here -->
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section id="booking-section" class="hidden">
+            <h2>Book Your Room</h2>
+            <form id="booking-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <!-- Confirmation Section -->
+        <section id="confirmation-section" class="hidden">
+            <h2>Booking Confirmation</h2>
+            <p id="confirmation-message"></p>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
